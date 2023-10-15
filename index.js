@@ -35,5 +35,5 @@ app.get('/', (req,res) => {
     res.json({message: "Home page"})
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => connection().then(() => console.log(`server up and running on http://localhost:${PORT}`)).catch(() => console.log('Connection failed')));
