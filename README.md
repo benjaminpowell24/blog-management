@@ -1,15 +1,17 @@
 # Blog Management API
 This is a simple blog management API that allows authenticated user to peform CRUD operations on posts they created.
 
+Temporarily deployed with Fly.io at https://blog-management-api.fly.dev/
+
 ## Install and Setup
 One way you can do this is by simply running it in docker
 
 NOTE: To run locally replace process.env.MONGO_URI with mongodb cluster connection string for node.js
 
 ```bash
-docker run -it -p 9000:4000 -v $(pwd):/app blog-management-api
+docker run -it -p 3000:3000 -v $(pwd):/app blog-management-api
 ```
-Now you can visit localhost:9000 on your browser
+Now you can visit localhost:3000 on your browser
 
 
 Another method will be to manually set-up:
@@ -68,7 +70,7 @@ Eg. {
 Use route '/posts/' to view all post created by current user
 
 5. View single post
-Use route '/posts/:_id' to view a specific post created by current user. Replace :_id with MongoDB object _id as follows:
+Use route '/posts/:_id' to view a specific post created by current user. Replace :_id as follows:
 Eg. /posts/652a7e8473984c86543584a8
 
 6. Update post
